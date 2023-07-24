@@ -11,7 +11,7 @@ driver.implicitly_wait(10) # This lets webdriver wait 10 seconds for the website
 driver.get("https://chat.openai.com") # ChatGPT website
 
 
-driver.implicitly_wait(10) # Wait
+driver.implicitly_wait(20) # Wait
 login_button = driver.find_element('xpath', '/html/body/div[1]/div[1]/div[1]/div[4]/button[1]') #Find button by xpath
 driver.execute_script('arguments[0].click();', login_button) #Click button
 
@@ -24,7 +24,7 @@ Email and password for testing:
 
 
 # Enters the username
-driver.implicitly_wait(5)
+driver.implicitly_wait(10)
 email_textbox = driver.find_element('xpath', '//*[@id="username"]')
 email_textbox.send_keys("gptquerytesting@gmail.com")
 
